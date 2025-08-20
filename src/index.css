@@ -2,39 +2,61 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Garden Guardians Design System - Nature-inspired colors and components */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Nature-inspired color palette */
+    --background: 120 20% 98%;
+    --foreground: 160 15% 15%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 160 15% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 160 15% 15%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Emerald green primary */
+    --primary: 150 65% 35%;
+    --primary-foreground: 0 0% 98%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Soft earth secondary */
+    --secondary: 45 25% 90%;
+    --secondary-foreground: 160 15% 15%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Sage muted */
+    --muted: 120 10% 92%;
+    --muted-foreground: 160 10% 45%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Sky blue accent */
+    --accent: 200 80% 85%;
+    --accent-foreground: 160 15% 15%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    /* Warning earth tone */
+    --destructive: 15 75% 50%;
+    --destructive-foreground: 0 0% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    /* Natural borders */
+    --border: 120 15% 85%;
+    --input: 120 15% 85%;
+    --ring: 150 65% 35%;
+
+    /* Garden-themed colors */
+    --forest: 140 50% 25%;
+    --sage: 120 20% 60%;
+    --earth: 30 35% 45%;
+    --sky: 200 80% 70%;
+    --sun: 45 95% 65%;
+    
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(150 65% 35%), hsl(140 50% 25%));
+    --gradient-card: linear-gradient(180deg, hsl(0 0% 100%), hsl(120 20% 98%));
+    --gradient-accent: linear-gradient(90deg, hsl(200 80% 85%), hsl(150 40% 80%));
+    
+    /* Shadows */
+    --shadow-natural: 0 4px 20px hsl(150 65% 35% / 0.1);
+    --shadow-card: 0 2px 10px hsl(160 15% 15% / 0.08);
+    --shadow-glow: 0 0 30px hsl(150 65% 35% / 0.2);
 
     --radius: 0.5rem;
 
@@ -100,6 +122,36 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans;
+  }
+}
+
+@layer components {
+  .hero-gradient {
+    background: var(--gradient-hero);
+  }
+  
+  .card-gradient {
+    background: var(--gradient-card);
+  }
+  
+  .accent-gradient {
+    background: var(--gradient-accent);
+  }
+  
+  .shadow-natural {
+    box-shadow: var(--shadow-natural);
+  }
+  
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+  
+  .shadow-glow {
+    box-shadow: var(--shadow-glow);
+  }
+  
+  .transition-smooth {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
 }

@@ -52,6 +52,12 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
+				// Garden-themed colors
+				forest: 'hsl(var(--forest))',
+				sage: 'hsl(var(--sage))',
+				earth: 'hsl(var(--earth))',
+				sky: 'hsl(var(--sky))',
+				sun: 'hsl(var(--sun))',
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
